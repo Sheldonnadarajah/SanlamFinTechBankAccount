@@ -29,3 +29,8 @@ Bank account withdrawal code improvement exercise
 - Handle exceptions for database and SNS operations gracefully.
 - Log all withdrawal attempts and failures for audit purposes.
 - Consider returning structured JSON responses.
+
+
+## Notes
+- import software.amazon.awssdk.services.sns.model.PublishResponse; is not used
+- If the database update is successful it will not get to the publish event code.

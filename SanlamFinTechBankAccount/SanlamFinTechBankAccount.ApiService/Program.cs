@@ -1,3 +1,13 @@
+using SanlamFinTechBankAccount.Application.Events;
+using SanlamFinTechBankAccount.Application.Services;
+using SanlamFinTechBankAccount.Application.Repositories;
+using SanlamFinTechBankAccount.Infrastructure.Events;
+using SanlamFinTechBankAccount.Infrastructure.Repositories;
+using System.Data;
+using Microsoft.Data.SqlClient;
+using Amazon.SimpleNotificationService;
+using Amazon.Extensions.NETCore.Setup;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire client integrations.
@@ -5,6 +15,16 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+
+// Dependency Injection registrations
+
+
+builder.Services.AddScoped<IBankAccountService, BankAccountService>();
+builder.Services.AddScoped<IEventPublisher, SnsEventPublisher>();
+builder.Services.AddScoped<IBalanceRepository, BalanceRepository>();
+builder.Services.AddAWSService<IAmazonSimpleNotificationService>();
+builder.Services.AddScoped<IDbConnection>(sp =>
+    new SqlConnection(builder.Configuration.GetConnectionString("BankDb")));
 
 var app = builder.Build();
 
