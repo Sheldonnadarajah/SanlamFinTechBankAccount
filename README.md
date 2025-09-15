@@ -7,9 +7,9 @@ Bank account withdrawal code improvement exercise
 
 - Given this code, I would be deeply concerned.
 - I would ask if this code is live?
-- I would ask for any documentation around process ,use case or business flow.
-- I would check if there are any unit / integration tests and write tests to meet the business flow.
-- I would then start refactoring taking into consideration the SOLID principals.
+- I would ask for any documentation around process, use case, or business flow.
+- I would check if there are any unit/integration tests and write tests to meet the business flow.
+- I would then start refactoring taking into consideration the SOLID principles.
 
 ## Details of Refactoring
 
@@ -31,16 +31,10 @@ Bank account withdrawal code improvement exercise
 - Log all withdrawal attempts and failures for audit purposes.
 - Consider returning structured JSON responses.
 
-
-## Notes Java Code
-- import software.amazon.awssdk.services.sns.model.PublishResponse; is not used
-- If the database update is successful it will not get to the publish event code.
-
-## Notes C# Code
-- Did not have time to add in the retry using Polly.
-- Added in the libraries needed to build successfully.
-
-
+## Notes
+- `import software.amazon.awssdk.services.sns.model.PublishResponse;` is not used
+- If the database update is unsuccessful, it will not get to the publish event code.
+- Did not have time to add retry logic using Polly.
 ![Diagram 1](1.jpg)
 ![Diagram 2](2.jpg)
 
