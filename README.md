@@ -2,6 +2,7 @@
 Bank account withdrawal code improvement exercise
 
 
+
 ## Approach
 
 - Given this code, I would be deeply concerned.
@@ -31,6 +32,15 @@ Bank account withdrawal code improvement exercise
 - Consider returning structured JSON responses.
 
 
-## Notes
+## Notes Java Code
 - import software.amazon.awssdk.services.sns.model.PublishResponse; is not used
 - If the database update is successful it will not get to the publish event code.
+
+## Notes C# Code
+- Did not have time to add in the retry using Polly.
+- Added in the libraries needed to build successfully.
+
+
+![Diagram 1](1.jpg)
+![Diagram 2](2.jpg)
+
