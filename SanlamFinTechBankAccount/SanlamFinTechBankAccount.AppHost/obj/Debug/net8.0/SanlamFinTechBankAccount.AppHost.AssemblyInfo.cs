@@ -28,7 +28,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SanlamFinTechBankAccount.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06459787cffb9d690a6e1e1aeabb5eff6a08fc41")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+548d8cc5a0b6c020a72a491bd639b00811279f86")]
 [assembly: System.Reflection.AssemblyProductAttribute("SanlamFinTechBankAccount.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SanlamFinTechBankAccount.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
