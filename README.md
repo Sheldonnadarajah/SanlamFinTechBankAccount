@@ -35,6 +35,9 @@ Bank account withdrawal code improvement exercise
 - `import software.amazon.awssdk.services.sns.model.PublishResponse;` is not used
 - If the database update is unsuccessful, it will not get to the publish event code.
 - Did not have time to add retry logic using Polly.
-![Diagram 1](1.jpg)
-![Diagram 2](2.jpg)
+
+## Images
+- ![Diagram 1](1.jpg)
+- ![Diagram 2](2.jpg)
+- ![Diagram 3](3.jpg)
 
